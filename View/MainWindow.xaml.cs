@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using NetM.Model;
+using NetM.Presenter;
 
 namespace NetM
 {
@@ -31,13 +33,20 @@ namespace NetM
         {
             InitializeComponent();
 
-            Console.WriteLine("test");
+            Observable model = new MainModel();
+            Observer presenter = new MainPresenter();
+            model.Subscribe(presenter);
+            model.notify();
+            model.UnSubscribe(presenter);
+            model.notify();
+
+            /*Console.WriteLine("test");
 
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.IP);
             socket.Bind(new IPEndPoint(IPAddress.Parse("192.168.178.14"), 0));
             socket.IOControl(IOControlCode.ReceiveAll, new byte[4]{ 1, 0, 0, 0 }, new byte[4]);
 
-            beginReceiveFrom();
+            beginReceiveFrom();*/
         }
 
         private void beginReceiveFrom()

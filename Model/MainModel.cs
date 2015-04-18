@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NetM.Presenter;
 
-namespace NetM
+namespace NetM.Model
 {
-    abstract class Observer
+    class MainModel : Observable
     {
-        public abstract void Update();
     }
 }

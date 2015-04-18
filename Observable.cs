@@ -14,12 +14,20 @@ namespace NetM
 
         public void Subscribe(Observer observer)
         {
-            onUpdate += new Update(observer.update);
+            onUpdate += new Update(observer.Update);
         }
 
-        public void Subscribe(Observer observer)
+        public void UnSubscribe(Observer observer)
         {
-            onUpdate -= new Update(observer.update);
+            onUpdate -= new Update(observer.Update);
+        }
+
+        public void notify()
+        {
+            if(onUpdate != null)
+            {
+                onUpdate();
+            }
         }
 
     }

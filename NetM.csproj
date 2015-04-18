@@ -65,7 +65,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\IModel.cs" />
-    <Compile Include="Model\Model.cs" />
+    <Compile Include="Model\MainModel.cs" />
     <Compile Include="Observable.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="Presenter\IPresenter.cs" />

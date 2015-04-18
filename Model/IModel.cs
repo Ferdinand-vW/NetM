@@ -7,7 +7,7 @@ using NetM.Presenter;
 
 namespace NetM.Model
 {
-    interface IModel : Observable
+    interface IModel
     {
     }
 }

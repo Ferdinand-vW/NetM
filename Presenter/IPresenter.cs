@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetM.Presenter
 {
-    interface IPresenter : Observer
+    interface IPresenter
     {
-        public override void update();
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace NetM.Presenter
 {
-    class MainPresenter : IPresenter
+    class MainPresenter : Observer
     {
+        public override void Update()
+        {
+            Console.WriteLine("updated");
+        }
     }
 }
