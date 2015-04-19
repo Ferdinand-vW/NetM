@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetM
+namespace NetM.View
 {
-    abstract class Observer
+    public interface IPacketView
     {
-        public abstract void Update();
     }
 }

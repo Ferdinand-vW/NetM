@@ -56,6 +56,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Packets\PacketReader.cs" />
+    <Compile Include="View\Packets\IPacketView.cs" />
+    <Compile Include="View\Packets\PacketView.xaml.cs">
+      <DependentUpon>PacketView.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -64,16 +69,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\IModel.cs" />
-    <Compile Include="Model\MainModel.cs" />
-    <Compile Include="Observable.cs" />
-    <Compile Include="Observer.cs" />
+    <Compile Include="Model\Packets\IPacketModel.cs" />
+    <Compile Include="Model\Packets\NewPacketEventArgs.cs" />
+    <Compile Include="Model\Packets\Packet.cs" />
+    <Compile Include="Model\Packets\PacketModel.cs" />
+    <Compile Include="Presenter\IMainPresenter.cs" />
     <Compile Include="Presenter\IPresenter.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="Presenter\Packets\IPacketPresenter.cs" />
+    <Compile Include="Presenter\Packets\PacketPresenter.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Packets\PacketView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
